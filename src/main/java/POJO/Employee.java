@@ -1,3 +1,5 @@
+package POJO;
+
 // POJO plain old java class
 public class Employee {
     private int id;
@@ -24,6 +26,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{id=" + id + ", name='" + name + "', salary=" + salary + "}";
+        return "POJO.Employee{id=" + id + ", name='" + name + "', salary=" + salary + "}";
     }
 }
