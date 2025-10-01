@@ -1,0 +1,79 @@
+## POJO
+
+### What is POJO ??
+
+1. POJO is a simple Java object not bound by any special restrictions or frameworks.
+
+2. It does not extend any predefined classes (like EntityBean) or implement framework-specific interfaces.
+
+3. It is just a container for data with private fields, constructors, getters/setters, and sometimes toString(), equals(), hashCode().
+
+4. Class should be public, Public default constructor.
+
+
+### Characteristics
+
+1. No Specialization – Does not extend framework/library classes.
+
+2. Encapsulation – Uses private fields + getters/setters.
+
+3. Lightweight – Pure Java object, no heavy dependencies.
+
+5. Flexible – Can be used across different layers (DTO, Entity, Model).
+
+6. Serialization friendly – Often used for transferring data.
+
+
+### When to use ?
+
+1. Data Transfer Objects (DTOs) – transferring data between layers (e.g., controller → service → DAO).
+
+2.Entity classes – mapping with databases (often combined with JPA/Hibernate annotations).
+
+3. Configuration objects – holding structured configuration values.
+
+4. API Request/Response models – representing JSON/XML data in REST/SOAP services.
+
+5. Encapsulation – ensuring controlled access to fields.
+
+
+### Benefits
+
+Simplicity – Easy to read, write, and test.
+
+Reusability – Can be used across multiple frameworks.
+
+Maintainability – Decouples business logic from persistence/framework code.
+
+Framework Compatibility – Many frameworks (Spring, Hibernate, Jackson) rely on POJOs.
+
+
+### POJO vs JavaBean
+
+1. JavaBean is a special type of POJO with rules:
+    a. Must be serializable.
+    b. Must have a public no-arg constructor.
+    c. Must use getters/setters.
+   Every JavaBean is a POJO, but not every POJO is a JavaBean.
+
+### POJO vs DTO
+
+1. DTO is a POJO used specifically to transfer data.
+
+###POJO vs Entity
+
+1. Entity is a POJO mapped to a database table.
+
+
+### Explanation by Shreyansh
+
+Client -->  Component ---> C1 , C2, C3 (Classes)
+
+Object from the request should not be used directly by all the classes so components do the one to one mapping.
+
+---> /rest Api (Controller) ---> Business logic --> Repository  --> POJO --> DB
+
+
+
+
+

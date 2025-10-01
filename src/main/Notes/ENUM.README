@@ -1,0 +1,23 @@
+## ENUM
+
+1. Collection of constants.
+2. Static and final implicitly.
+3. Cannot extend any class already extends java.lang.Enum
+4. Can implement interfaces
+5. Can have variables, methods and constructors.
+6. It can not be initiated (as its constructor will be private only, even if we give default bytecode will change it to private).
+7. No other class can extend ENUM.
+8. Can have abstract method and all the constant should implement that abstract method.
+
+
+'''
+1. usage of values() and ordinal()
+for(EnumSample sample : EnumSample.values()){
+    System.out.println(sample.ordinal());
+}
+
+2. usage of ValuesOf() and name()
+EnumSample enumVar = EnumSample.valueOf("FRIDAY");
+System.out.println(enumVar.name())
+
+'''
