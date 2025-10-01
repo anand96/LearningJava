@@ -1,0 +1,9 @@
+
+
+
+1. We cannot change the value of an object once created
+2. Declare class as final so that it cannot be extended.
+3. All class members should be private.
+4. All class members are initialized only once using constructor.
+5. No setter methods just getter
+6. String, Wrapper are example
